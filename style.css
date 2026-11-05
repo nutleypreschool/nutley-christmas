@@ -109,6 +109,23 @@ h1 .small {
   font-size: 1.1rem;
 }
 
+.venue {
+  margin: 0 0 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--ice);
+}
+
+.venue strong {
+  font-size: 1.2rem;
+  color: var(--snow);
+}
+
+.venue a {
+  color: var(--gold);
+  font-size: 0.95rem;
+}
+
 .invite {
   margin: 0 auto 1.25rem;
   max-width: 26em;
