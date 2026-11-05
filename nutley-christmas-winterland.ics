@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Nutley Christmas Winterland//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:nutley-christmas-winterland-2026@nutleychristmas
+DTSTAMP:20261105T000000Z
+DTSTART:20261205T150000Z
+DTEND:20261205T190000Z
+SUMMARY:Nutley Christmas Winterland
+DESCRIPTION:Join us for a special Christmas event for Nutley! More details coming soon.
+LOCATION:Nutley
+END:VEVENT
+END:VCALENDAR

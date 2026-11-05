@@ -1,0 +1,179 @@
+:root {
+  --night: #0b1f3a;
+  --night-deep: #06122a;
+  --red: #c8102e;
+  --gold: #f2c14e;
+  --snow: #ffffff;
+  --ice: #d9ecff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Lato", system-ui, sans-serif;
+  color: var(--snow);
+  background: radial-gradient(ellipse at top, #1d3d6b 0%, var(--night) 45%, var(--night-deep) 100%) fixed;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  overflow-x: hidden;
+}
+
+/* ---------- Card ---------- */
+
+.card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 560px;
+  text-align: center;
+  padding: 3rem 2rem 2.5rem;
+  border: 2px solid rgba(242, 193, 78, 0.6);
+  border-radius: 24px;
+  background: rgba(6, 18, 42, 0.55);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45), inset 0 0 40px rgba(217, 236, 255, 0.06);
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+h1 {
+  margin: 0;
+  font-family: "Mountains of Christmas", Georgia, serif;
+  font-size: clamp(2.6rem, 9vw, 4rem);
+  line-height: 1.05;
+  color: var(--snow);
+  text-shadow: 0 0 18px rgba(217, 236, 255, 0.55);
+}
+
+h1 .small {
+  display: block;
+  font-size: 0.65em;
+  color: var(--ice);
+}
+
+.divider {
+  margin: 1.5rem 0;
+  color: var(--gold);
+  letter-spacing: 0.6em;
+}
+
+/* ---------- Date ---------- */
+
+.date {
+  margin: 0 0 1.5rem;
+}
+
+.date span {
+  display: block;
+}
+
+.date .day {
+  font-size: 1.1rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ice);
+}
+
+.date .big {
+  font-family: "Mountains of Christmas", Georgia, serif;
+  font-size: clamp(2.2rem, 8vw, 3.2rem);
+  color: var(--gold);
+  line-height: 1.2;
+}
+
+.date .time {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.35rem 1.1rem;
+  border-radius: 999px;
+  background: var(--red);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.invite {
+  margin: 0 auto 1.25rem;
+  max-width: 26em;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.countdown {
+  margin: 0 0 1.5rem;
+  min-height: 1.5em;
+  color: var(--ice);
+  font-style: italic;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border-radius: 999px;
+  background: var(--snow);
+  color: var(--night);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(217, 236, 255, 0.35);
+}
+
+.more {
+  margin: 1.75rem 0 0;
+  font-size: 0.95rem;
+  color: rgba(217, 236, 255, 0.75);
+}
+
+/* ---------- Snow ---------- */
+
+.snow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.flake {
+  position: absolute;
+  top: -10px;
+  color: var(--snow);
+  user-select: none;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) translateX(var(--drift, 0));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flake {
+    animation: none;
+    display: none;
+  }
+}
