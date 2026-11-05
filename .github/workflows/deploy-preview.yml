@@ -1,0 +1,52 @@
+# Publishes the preview site (preview.nutleychristmas.com).
+#
+# Only runs in the nutley-christmas-preview repo. In the main repo the job is
+# skipped, and the live site keeps publishing straight from the main branch.
+
+name: Deploy preview
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    if: github.repository == 'nutleypreschool/nutley-christmas-preview'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Mark as preview
+        run: |
+          # The CNAME file belongs to the live site; the preview's domain is
+          # set in the preview repo's Pages settings instead.
+          rm -f CNAME
+
+          # Keep the preview out of search engines
+          printf 'User-agent: *\nDisallow: /\n' > robots.txt
+          sed -i 's|<head>|<head>\n  <meta name="robots" content="noindex, nofollow">|' index.html
+
+          # Show a banner so nobody mistakes it for the live site
+          sed -i 's|<body>|<body>\n  <div style="position:fixed;top:0;left:0;right:0;z-index:10;padding:0.4rem;background:#c8102e;color:#fff;font:700 0.9rem/1.2 system-ui,sans-serif;text-align:center;letter-spacing:0.1em;">PREVIEW – not the live site</div>|' index.html
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

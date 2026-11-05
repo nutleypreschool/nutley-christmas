@@ -13,6 +13,8 @@ At the moment it's a "save the date" page. More details will be added as plans c
 | `script.js` | Falling snow animation and the "days to go" countdown |
 | `nutley-christmas-winterland.ics` | Calendar file behind the "Add to my calendar" button |
 | `.gitattributes` | Keeps the calendar file's line endings correct for calendar apps |
+| `CNAME` | Tells GitHub Pages to serve the live site at nutleychristmas.com (don't delete) |
+| `.github/workflows/deploy-preview.yml` | Publishes the preview site (see below) |
 
 It's a plain static site with no build step and nothing to install.
 
@@ -33,6 +35,26 @@ git add .
 git commit -m "Describe your change"
 git push
 ```
+
+## Previewing changes online
+
+Changes can be checked at **https://preview.nutleychristmas.com** before they go live. The preview is published from a separate repo, [`nutleypreschool/nutley-christmas-preview`](https://github.com/nutleypreschool/nutley-christmas-preview), by the workflow in `.github/workflows/deploy-preview.yml`. That workflow is skipped in this repo.
+
+To preview a branch:
+
+```bash
+git push preview my-branch:main --force
+```
+
+When you're happy, merge the branch into `main` and push to update the live site:
+
+```bash
+git switch main
+git merge my-branch
+git push
+```
+
+The preview shows a red "PREVIEW" banner and is hidden from search engines, but anyone with the link can see it.
 
 ## Updating event details
 
