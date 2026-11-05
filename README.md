@@ -11,6 +11,7 @@ At the moment it's a "save the date" page. More details will be added as plans c
 | `index.html` | The page itself: all the text and content |
 | `style.css` | Colours, fonts and layout |
 | `script.js` | Falling snow animation and the "days to go" countdown |
+| `images/` | Logos for the preschool, primary school and The Coffee House |
 | `nutley-christmas-winterland.ics` | Calendar file behind the "Add to my calendar" button |
 | `.gitattributes` | Keeps the calendar file's line endings correct for calendar apps |
 | `CNAME` | Tells GitHub Pages to serve the live site at nutleychristmas.com (don't delete) |
