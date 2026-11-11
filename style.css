@@ -126,6 +126,13 @@ h1 .small {
   font-size: 0.95rem;
 }
 
+.location {
+  margin: -0.75rem 0 1.5rem;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: rgba(217, 236, 255, 0.8);
+}
+
 .invite {
   margin: 0 auto 1.25rem;
   max-width: 26em;
