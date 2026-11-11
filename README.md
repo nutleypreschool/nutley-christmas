@@ -2,7 +2,7 @@
 
 The website for **Nutley's Christmas Winterland**, a Christmas fundraising event for Little Deers Nutley Preschool and Nutley Church of England Primary School, in collaboration with The Coffee House Nutley, on **Saturday 5th December, 3pm till 7pm**.
 
-At the moment it's a "save the date" page. More details will be added as plans come together.
+The site covers the timetable, the outdoor Christmas market, Santa's grotto and the fundraising.
 
 ## What's here
 

@@ -22,11 +22,22 @@ body {
   color: var(--snow);
   background: radial-gradient(ellipse at top, #1d3d6b 0%, var(--night) 45%, var(--night-deep) 100%) fixed;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 2rem 1rem;
   overflow-x: hidden;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* ---------- Card ---------- */
@@ -35,8 +46,8 @@ body {
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 560px;
   text-align: center;
+  scroll-margin-top: 1rem;
   padding: 3rem 2rem 2.5rem;
   border: 2px solid rgba(242, 193, 78, 0.6);
   border-radius: 24px;
@@ -151,19 +162,29 @@ h1 .small {
 
 /* ---------- Fundraising ---------- */
 
-.cause {
-  margin: 0 0 1.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(242, 193, 78, 0.35);
+h2 {
+  margin: 0 0 1.25rem;
+  font-family: "Mountains of Christmas", Georgia, serif;
+  font-size: clamp(2rem, 7vw, 2.6rem);
+  line-height: 1.1;
+  color: var(--gold);
 }
 
-.cause h2 {
-  margin: 0 0 1rem;
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--gold);
+h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.15rem;
+}
+
+.lead {
+  margin: 0 auto 1.5rem;
+  max-width: 30em;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--ice);
+}
+
+.lead strong {
+  color: var(--snow);
 }
 
 .beneficiaries {
@@ -276,10 +297,182 @@ h1 .small {
   box-shadow: 0 8px 20px rgba(217, 236, 255, 0.35);
 }
 
-.more {
-  margin: 1.75rem 0 0;
+/* ---------- Jump links ---------- */
+
+.jump {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(242, 193, 78, 0.35);
+}
+
+.jump a {
+  padding: 0.4rem 0.9rem;
+  border: 1px solid rgba(217, 236, 255, 0.35);
+  border-radius: 999px;
+  color: var(--ice);
   font-size: 0.95rem;
+  text-decoration: none;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.jump a:hover,
+.jump a:focus-visible {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* ---------- Timeline ---------- */
+
+.timeline {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.timeline li {
+  display: grid;
+  grid-template-columns: 4.5rem 2.5rem 1fr;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 0.75rem;
+  border-bottom: 1px solid rgba(217, 236, 255, 0.15);
+}
+
+.timeline li:last-child {
+  border-bottom: 0;
+}
+
+.timeline .highlight {
+  border-radius: 12px;
+  border-bottom-color: transparent;
+  background: rgba(242, 193, 78, 0.12);
+  box-shadow: inset 0 0 0 1px rgba(242, 193, 78, 0.5);
+}
+
+.timeline .when {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--gold);
+}
+
+.timeline .icon {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.timeline .what strong {
+  display: block;
+  font-size: 1.1rem;
+}
+
+.timeline .what span {
+  font-size: 0.95rem;
+  color: var(--ice);
+}
+
+/* ---------- Market ---------- */
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(217, 236, 255, 0.25);
+  border-radius: 14px;
+  background: rgba(217, 236, 255, 0.06);
+  text-align: left;
+}
+
+.feature p {
+  margin: 0;
+  line-height: 1.5;
+  color: var(--ice);
+}
+
+.feature p a {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.feature-logo {
+  flex: 0 0 140px;
+  padding: 0.6rem;
+  border-radius: 10px;
+  background: var(--snow);
+}
+
+.feature-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.feature-icon {
+  flex: 0 0 140px;
+  font-size: 2.6rem;
+  text-align: center;
+}
+
+.tip {
+  margin: 1.25rem 0 0;
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .feature {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature-logo,
+  .feature-icon {
+    flex-basis: auto;
+  }
+
+  .feature-logo {
+    width: 180px;
+  }
+
+  .timeline li {
+    grid-template-columns: 3.75rem 2rem 1fr;
+    padding: 0.85rem 0.25rem;
+  }
+
+  .timeline .highlight {
+    padding: 0.85rem 0.5rem;
+  }
+}
+
+/* ---------- Santa ---------- */
+
+.big-icon {
+  margin: 0 0 0.5rem;
+  font-size: 4rem;
+  line-height: 1;
+}
+
+#santa .lead {
+  margin-bottom: 0;
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  padding: 0.5rem 1rem 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.6;
   color: rgba(217, 236, 255, 0.75);
+}
+
+.footer strong {
+  color: var(--snow);
 }
 
 /* ---------- Snow ---------- */
