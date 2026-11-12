@@ -347,11 +347,12 @@ h3 {
   border-bottom: 0;
 }
 
-.timeline .highlight {
-  border-radius: 12px;
-  border-bottom-color: transparent;
-  background: rgba(242, 193, 78, 0.12);
-  box-shadow: inset 0 0 0 1px rgba(242, 193, 78, 0.5);
+.timeline .highlight .what strong {
+  color: var(--gold);
+}
+
+.timeline .highlight .icon {
+  font-size: 2rem;
 }
 
 .timeline .when {
@@ -442,10 +443,6 @@ h3 {
   .timeline li {
     grid-template-columns: 3.75rem 2rem 1fr;
     padding: 0.85rem 0.25rem;
-  }
-
-  .timeline .highlight {
-    padding: 0.85rem 0.5rem;
   }
 }
 
