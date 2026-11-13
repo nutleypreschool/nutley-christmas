@@ -458,6 +458,53 @@ h3 {
   margin-bottom: 0;
 }
 
+/* ---------- Thanks ---------- */
+
+.supporters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.supporters li {
+  flex: 0 1 260px;
+}
+
+.supporters li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 96px;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: var(--snow);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.supporters li > a:hover,
+.supporters li > a:focus-visible {
+  border-color: var(--gold);
+  box-shadow: 0 6px 18px rgba(217, 236, 255, 0.25);
+}
+
+.supporters img {
+  max-width: 100%;
+  max-height: 56px;
+  width: auto;
+  height: auto;
+}
+
+.supporters li > span:last-child {
+  font-size: 0.95rem;
+  color: var(--ice);
+}
+
 /* ---------- Footer ---------- */
 
 .footer {
