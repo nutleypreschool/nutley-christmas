@@ -183,6 +183,10 @@ h3 {
   color: var(--ice);
 }
 
+.card > .lead:last-child {
+  margin-bottom: 0;
+}
+
 .lead strong {
   color: var(--snow);
 }
@@ -573,12 +577,6 @@ h3 {
 .supporters li > span:last-child {
   font-size: 0.95rem;
   color: var(--ice);
-}
-
-/* ---------- Lights ---------- */
-
-#lights .lead:last-child {
-  margin-bottom: 0;
 }
 
 .lead a {
