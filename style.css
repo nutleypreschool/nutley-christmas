@@ -376,6 +376,11 @@ h3 {
   color: var(--ice);
 }
 
+.timeline .what a {
+  color: var(--gold);
+  font-weight: 700;
+}
+
 /* ---------- Market ---------- */
 
 .feature {
@@ -454,8 +459,26 @@ h3 {
   line-height: 1;
 }
 
-#santa .lead {
-  margin-bottom: 0;
+.grotto-list {
+  display: inline-block;
+  margin: 0 auto 1.5rem;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
+.grotto-list span {
+  display: inline-block;
+  width: 2rem;
+}
+
+.small-print {
+  margin: 0;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: rgba(217, 236, 255, 0.75);
 }
 
 /* ---------- Thanks ---------- */
