@@ -507,6 +507,7 @@ h3 {
   border-radius: 10px;
   border: 1px solid transparent;
   background: var(--snow);
+  text-decoration: none;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
@@ -514,6 +515,15 @@ h3 {
 .supporters li > a:focus-visible {
   border-color: var(--gold);
   box-shadow: 0 6px 18px rgba(217, 236, 255, 0.25);
+}
+
+.supporters .supporter-name {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  letter-spacing: 0.12em;
+  line-height: 1.35;
+  text-transform: uppercase;
+  color: #222;
 }
 
 .supporters img {
