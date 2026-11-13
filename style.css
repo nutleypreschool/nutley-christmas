@@ -538,6 +538,17 @@ h3 {
   color: var(--ice);
 }
 
+/* ---------- Lights ---------- */
+
+#lights .lead:last-child {
+  margin-bottom: 0;
+}
+
+.lead a {
+  color: var(--gold);
+  font-weight: 700;
+}
+
 /* ---------- Footer ---------- */
 
 .footer {
