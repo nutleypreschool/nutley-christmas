@@ -11,7 +11,7 @@ The site covers the timetable, the outdoor Christmas market, Santa's grotto and 
 | `index.html` | The page itself: all the text and content |
 | `style.css` | Colours, fonts and layout |
 | `script.js` | Falling snow animation and the "days to go" countdown |
-| `images/` | Logos for the preschool, primary school, The Coffee House and Wilderness Wood, plus `og-image.png`, the picture shown when the link is shared |
+| `images/` | Logos for the preschool, primary school, The Coffee House and Wilderness Wood, the AM Skip & Plant Hire icon, plus `og-image.png`, the picture shown when the link is shared |
 | `nutley-christmas-winterland.ics` | Calendar file behind the "Add to my calendar" button |
 | `.gitattributes` | Keeps the calendar file's line endings correct for calendar apps |
 | `robots.txt`, `sitemap.xml` | Help search engines find the site (update `lastmod` in the sitemap after big changes) |

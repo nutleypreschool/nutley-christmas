@@ -533,6 +533,43 @@ h3 {
   height: auto;
 }
 
+/* AM Skip & Plant Hire's logo is styled text on dark grey, recreated here */
+.supporters li > a.amskips {
+  background: #232323;
+}
+
+.amskips-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  line-height: 0.8;
+}
+
+.amskips-logo img {
+  height: 54px;
+}
+
+.amskips-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.amskips-name {
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: #ffc326;
+}
+
+.amskips-sub {
+  margin-top: 6px;
+  font-size: 11px;
+  letter-spacing: 0.43em;
+  color: #fff;
+}
+
 .supporters li > span:last-child {
   font-size: 0.95rem;
   color: var(--ice);
