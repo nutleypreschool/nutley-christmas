@@ -464,7 +464,7 @@ h3 {
 }
 
 .grotto-list {
-  display: inline-block;
+  display: table;
   margin: 0 auto 1.5rem;
   padding: 0;
   list-style: none;

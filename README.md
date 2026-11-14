@@ -61,5 +61,6 @@ The preview shows a red "PREVIEW" banner and is hidden from search engines, but 
 ## Updating event details
 
 - **Wording, date or time:** edit `index.html`
+- **Grotto booking link:** the "Book your grotto slot" button in the Santa's grotto section of `index.html`
 - **Countdown:** the event start and end times are near the bottom of `script.js`
 - **Calendar entry:** update `DTSTART`, `DTEND`, `LOCATION` and `DESCRIPTION` in the `.ics` file. Times are in UTC, which matches UK time in December.
