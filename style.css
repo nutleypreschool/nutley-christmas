@@ -433,6 +433,7 @@ h3 {
   margin: 1.25rem 0 0;
   font-weight: 700;
 }
+.tip + .tip { margin-top: 0.5rem; }
 
 @media (max-width: 480px) {
   .feature {
