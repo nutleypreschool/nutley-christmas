@@ -1,5 +1,7 @@
 // Falling snow
 (function () {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
   const container = document.querySelector(".snow");
   const flakes = ["❄", "❅", "❆", "•"];
   const count = window.innerWidth < 600 ? 30 : 60;

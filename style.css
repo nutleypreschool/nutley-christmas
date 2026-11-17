@@ -11,19 +11,16 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  margin: 0;
-  min-height: 100%;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+  margin: 0;
+  padding: 2rem 1rem;
   font-family: "Lato", system-ui, sans-serif;
   color: var(--snow);
-  background: radial-gradient(ellipse at top, #1d3d6b 0%, var(--night) 45%, var(--night-deep) 100%) fixed;
-  min-height: 100vh;
-  padding: 2rem 1rem;
-  overflow-x: hidden;
+  background: var(--night-deep);
 }
 
 main {
@@ -36,15 +33,9 @@ main {
   margin: 0 auto;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 /* ---------- Card ---------- */
 
 .card {
-  position: relative;
-  z-index: 1;
   width: 100%;
   text-align: center;
   scroll-margin-top: 1rem;
@@ -160,7 +151,7 @@ h1 .small {
   line-height: 1.5;
 }
 
-/* ---------- Fundraising ---------- */
+/* ---------- Section text ---------- */
 
 h2 {
   margin: 0 0 1.25rem;
@@ -190,6 +181,13 @@ h3 {
 .lead strong {
   color: var(--snow);
 }
+
+.lead a {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+/* ---------- Fundraising ---------- */
 
 .beneficiaries {
   display: grid;
@@ -433,7 +431,10 @@ h3 {
   margin: 1.25rem 0 0;
   font-weight: 700;
 }
-.tip + .tip { margin-top: 0.5rem; }
+
+.tip + .tip {
+  margin-top: 0.5rem;
+}
 
 @media (max-width: 480px) {
   .feature {
@@ -477,13 +478,6 @@ h3 {
 .grotto-list span {
   display: inline-block;
   width: 2rem;
-}
-
-.small-print {
-  margin: 0;
-  font-size: 0.85rem;
-  font-style: italic;
-  color: rgba(217, 236, 255, 0.75);
 }
 
 /* ---------- Thanks ---------- */
@@ -580,11 +574,6 @@ h3 {
   color: var(--ice);
 }
 
-.lead a {
-  color: var(--gold);
-  font-weight: 700;
-}
-
 /* ---------- Footer ---------- */
 
 .footer {
@@ -604,8 +593,9 @@ h3 {
 .snow {
   position: fixed;
   inset: 0;
-  pointer-events: none;
   overflow: hidden;
+  pointer-events: none;
+  background: radial-gradient(ellipse at top, #1d3d6b 0%, var(--night) 45%, var(--night-deep) 100%);
 }
 
 .flake {
@@ -621,12 +611,5 @@ h3 {
 @keyframes fall {
   to {
     transform: translateY(110vh) translateX(var(--drift, 0));
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .flake {
-    animation: none;
-    display: none;
   }
 }
