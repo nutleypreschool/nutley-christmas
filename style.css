@@ -480,6 +480,13 @@ h3 {
   width: 2rem;
 }
 
+.small-print {
+  margin: 1.5rem 0 0;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: rgba(217, 236, 255, 0.75);
+}
+
 /* ---------- Thanks ---------- */
 
 .supporters {
